@@ -1,3 +1,6 @@
+import tech from "../assets/tech.svg";
+import design from "../assets/design.svg";
+
 export default function Education() {
   const techSkills = [
     "React",
@@ -74,7 +77,7 @@ export default function Education() {
           <div className="flex flex-row">
             {" "}
             <img
-              src="src\assets\design.svg"
+              src={design}
               alt="art icon"
               className="w-[8%]"
             ></img>
@@ -86,7 +89,7 @@ export default function Education() {
         <div className="flex flex-row bg-slate-50 border-1 border-slate-200 p-2 rounded-md flex-wrap hover:border-1 hover:border-blue-600 hover:shadow-sm inset-shadow-2xs">
           <div className="flex flex-row">
             <img
-              src="src\assets\tech.svg"
+              src={tech}
               alt="tech icon"
               className="w-[8%]"
             ></img>
