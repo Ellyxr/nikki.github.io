@@ -1,4 +1,3 @@
-import { useState } from "react";
 import tech from "../assets/tech.svg";
 import design from "../assets/design.svg";
 
