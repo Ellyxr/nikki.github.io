@@ -16,6 +16,8 @@ export default {
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
                 pixel: ['VT323', 'monospace'],
+                alagard: ['Alagard', 'sans-serif'],
+                spacegrotesk: ['Space Grotesk', 'sans-serif'],
             },
             colors: {
                 border: "hsl(var(--border))",

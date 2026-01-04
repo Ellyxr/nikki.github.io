@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div className="text-left mt-8 mt-24">
       <section className="flex flex-row justify-between mb-4">
-        <p className="text-lg font-medium underline decoration-blue-500">
+        <p className="font-alagard text-4xl font-medium underline decoration-blue-500">
           {" "}
           Contact Me
         </p>
@@ -24,13 +24,13 @@ export default function Contact() {
         </div>
         <div className="flex flex-col w-1/2 flex-wrap">
           {" "}
-          <a className="font-medium underline decoration-blue-500"> Email</a>
+          <a className="font-medium underline decoration-blue-500 text-2xl font-spacegrotesk"> Email</a>
           <section className="flex flex-col">
             <a className="hover:text-blue-600"> nicholequimpan@gmail.com </a>
             <span></span>{" "}
             <a className="hover:text-blue-600"> Ellyxdesigned@gmail.com</a>
           </section>
-          <a className="font-medium underline decoration-blue-500 hover:text-blue-600">
+          <a className="font-medium underline decoration-blue-500 hover:text-blue-600 text-2xl font-spacegrotesk">
             {" "}
             Github{" "}
           </a>
@@ -50,7 +50,7 @@ export default function Contact() {
             {" "}
             /nicholequimpan
           </a>
-          <a className="font-medium underline decoration-blue-500 hover:text-blue-600">
+          <a className="font-medium underline decoration-blue-500 hover:text-blue-600 text-2xl font-spacegrotesk">
             {" "}
             Linkedin
           </a>
@@ -62,16 +62,19 @@ export default function Contact() {
             {" "}
             /nichole-quimpan
           </a>
-          <a className="hover:text-blue-600 font-medium hover:underline">
+          <a className="hover:text-blue-600 font-medium hover:underline text-2xl font-spacegrotesk">
             {" "}
             Download My Resume
           </a>
         </div>
       </section>
-      <div className="bg-blue-700 h-1/2 mt-12 hover:border-1 hover:border-blue-700 hover:bg-transparent">
+      <div className="flex flex-wrap overflow-hidden">
+                <br></br>
         {"‎ "}
-        <br></br>
-        {"‎ "}
+      <span className="text-blue-700 text-8xl">
+        {"******************************"}
+        </span>
+
       </div>
     </div>
   );

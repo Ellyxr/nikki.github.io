@@ -1,4 +1,5 @@
 import tech from "../assets/tech.svg";
+import stardewCropsCalc from "../assets/stardew-crops-calculator.gif";
 
 export const dev = [
   {
@@ -7,8 +8,9 @@ export const dev = [
     description:
       "A tool to help players calculate crop profits, including modded crops and tax adjustments. Designed for modded gameplay to optimize farm's earnings.",
     tools: ["HTML", "SCSS", "JS", "Graph.js"],
-    media: tech,
+    media: stardewCropsCalc,
   },
+  /** 
   {
     id: "monitr",
     title: "Monitr",
@@ -33,4 +35,5 @@ export const dev = [
     tools: ["Kotlin", "API"],
     media: tech,
   },
+  */
 ];

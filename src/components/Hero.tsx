@@ -8,19 +8,21 @@ interface HeroProps {
 export default function Hero({ onProjectTypeClick }: HeroProps) {
 
   return (
-    <section id="hero" className="snap-section">
-      <div className="bg-blue-700 h-1/2 hover:border-1 hover:border-blue-700 hover:bg-transparent">
-        {"‎ "}
+    <section id="hero" className="snap-section h-dvh ">
+      <div className="flex flex-wrap overflow-hidden">
+      <span className="text-blue-700 text-8xl">
+        {"******************************"}
+        </span>
         <br></br>
         {"‎ "}
       </div>
       <div className="flex flex-row mt-16">
         <div className="flex-2 flex-col w-2/3 text-left">
-          <p className="text-4xl">
-            Nichole is a Frontend Developer and Designer from the Philippines.
+          <p className="text-6xl font-spacegrotesk">
+            <span className="">Nichole</span> is a <span className="font-alagard"> Frontend Developer</span> and <span className="font-alagard">Designer</span> from the <span className="">Philippines</span> .
           </p>
           <br></br>
-          <p className="text-xl w-2/4">
+          <p className="text-2xl w-3/4 font-spacegrotesk">
             {" "}
             She enjoys volunteering, creating passion projects to make life
             easier, and watching devlogs.{" "}

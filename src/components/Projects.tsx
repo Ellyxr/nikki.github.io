@@ -29,7 +29,7 @@ export const ProjectType = ({ initialActiveType }: ProjectTypeProps) => {
             e.preventDefault();
             toggleProjects();
           }}
-          className="cursor-pointer border-slate-200 rounded-md p-1 flex justify-end text-blue-600  font-semibold text-xl"
+          className="cursor-pointer border-slate-200 rounded-md p-1 flex justify-end text-blue-600  font-semibold text-xl font-alagard"
         >
           {activeType === "dev" ? "Dev" : "Design"}
         </a>
@@ -42,12 +42,12 @@ export const ProjectType = ({ initialActiveType }: ProjectTypeProps) => {
 
 const DevContainer = () => {
   return (
-    <section className="gap-4 flex flex-col p-2 h-dvw h-full">
+    <section className="gap-4 flex flex-col h-dvw h-full">
       {dev.map((n) => (
         <div key={n.id} className="flex flex-row">
           <div className="flex flex-col w-2/4 justify-end p-2">
-            <h2 className="">{n.title}</h2>
-            <p className="text-sm">{n.description}</p>
+            <h2 className="font-alagard text-4xl hover:text-blue-700">{n.title}</h2>
+            <p className="text-md w-3/4 mb-2 font-spacegrotesk">{n.description}</p>
             <div className="flex flex-wrap">
             {n.tools.map((tool, index) => (
               <span key={index} className="text-sm bg-slate-50 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600 cursor-default">
@@ -58,9 +58,9 @@ const DevContainer = () => {
           </div>
 
           <div className="w-2/4">
-            <div className="bg-slate-50 rounded-md border-1 border-slate-100 shadow-sm hover:shadow-md hover:border-blue-600">
-              {" "}
-              <img src={n.media} alt={n.title} className="w-2/4"></img>
+            <div className="bg-slate-50 rounded-md border-2 border-slate-100 shadow-sm hover:shadow-md hover:border-blue-600 justify-center flex overflow-hidden object-cover">
+
+              <img src={n.media} alt={n.title} className=""></img>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function Projects({ activeType }: ProjectsProps) {
   return (
     <div id="projects" className="flex flex-col p-2 mt-8 gap-4">
       <section className="flex flex-row justify-between">
-        <p className="text-left text-2xl font-medium underline decoration-blue-500">
+        <p className="text-left text-4xl font-medium underline decoration-blue-500 font-alagard">
           {" "}
           Projects{" "}
         </p>
