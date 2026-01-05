@@ -44,8 +44,8 @@ const DevContainer = () => {
   return (
     <section className="gap-4 flex flex-col h-dvw h-full">
       {dev.map((n) => (
-        <div key={n.id} className="flex flex-row">
-          <div className="flex flex-col w-2/4 justify-end p-2">
+        <div key={n.id} className="flex flex-row max-md:flex-col-reverse">
+          <div className="flex flex-col w-2/4 justify-end p-2 max-md:w-4/4">
             <h2 className="font-alagard text-4xl hover:text-blue-700">{n.title}</h2>
             <p className="text-md w-3/4 mb-2 font-spacegrotesk">{n.description}</p>
             <div className="flex flex-wrap">
@@ -57,7 +57,7 @@ const DevContainer = () => {
             </div>
           </div>
 
-          <div className="w-2/4">
+          <div className="w-2/4 max-md:w-4/4">
             <div className="bg-slate-50 rounded-md border-2 border-slate-100 shadow-sm hover:shadow-md hover:border-blue-600 justify-center flex overflow-hidden object-cover">
 
               <img src={n.media} alt={n.title} className=""></img>
@@ -73,14 +73,20 @@ const DesignContainer = () => {
   return (
     <section className="gap-4 flex flex-col p-2 h-dvw h-full">
       {design.map((n) => (
-        <div key={n.id} className="flex flex-row">
-          <div className="flex flex-col w-2/4 justify-end p-2">
-            <h2 className="">{n.title}</h2>
-            <p className="text-sm">{n.description}</p>
-            <span className="">{n.tools}</span>
+        <div key={n.id} className="flex flex-row max-md:flex-col-reverse">
+          <div className="flex flex-col w-2/4 justify-end p-2 max-md:w-4/4">
+            <h2 className="font-alagard text-4xl hover:text-blue-700">{n.title}</h2>
+            <p className="text-sm font-spacegrotesk">{n.description}</p>
+            <div className="flex flex-wrap">
+            {n.tools.map((tool, index) => (
+              <span key={index} className="text-sm bg-slate-50 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600 cursor-default">
+                {tool}
+              </span>
+            ))}
+            </div>
           </div>
 
-          <div className="w-2/4">
+          <div className="w-2/4  max-md:w-4/4">
             <div className="bg-slate-50 rounded-md border-1 border-slate-100 shadow-sm hover:shadow-md hover:border-blue-600">
               {" "}
               <img src={n.media} alt={n.title} className="w-2/4"></img>
@@ -98,9 +104,9 @@ interface ProjectsProps {
 
 export default function Projects({ activeType }: ProjectsProps) {
   return (
-    <div id="projects" className="flex flex-col p-2 mt-8 gap-4">
-      <section className="flex flex-row justify-between">
-        <p className="text-left text-4xl font-medium underline decoration-blue-500 font-alagard">
+    <div id="projects" className="flex flex-col p-2 mt-8 gap-4 ">
+      <section className="flex flex-row justify-between  max-md:flex-col">
+        <p className="max-md:text-center text-left text-4xl font-medium underline decoration-blue-500 font-alagard">
           {" "}
           Projects{" "}
         </p>
@@ -109,7 +115,7 @@ export default function Projects({ activeType }: ProjectsProps) {
           This portfolio was made using React.js, Typescript, and TailwindCSS.
         </a>
       </section>
-      <section className="flex flex-row text-left">
+      <section className="flex flex-row text-left ">
         <div className="flex flex-row">
           <ProjectType initialActiveType={activeType} />
         </div>

@@ -1,2 +1,13 @@
 @config "../tailwind.config.ts";
 @import "tailwindcss";
+
+@theme {
+}
+
+@layer components {
+  .responsive-screen {
+    @apply sm:flex-col sm:bg-red-100;
+    @apply md:bg-blue-400 md:flex-col md:text-center;
+    @apply lg:flex lg:bg-red-200;
+  }
+}
