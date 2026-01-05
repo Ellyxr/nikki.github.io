@@ -1,4 +1,4 @@
-import tech from "../assets/tech.svg";
+
 import stardewCropsCalc from "../assets/stardew-crops-calculator.gif";
 
 export const dev = [
