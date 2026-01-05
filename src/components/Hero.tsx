@@ -17,12 +17,12 @@ export default function Hero({ onProjectTypeClick }: HeroProps) {
         {"‎ "}
       </div>
       <div className="flex lg:flex-row max-md:flex-col md:flex-col mt-16 ">
-        <div className="max-md:w-3/3 md:text-center sm:w-3/3 max-md:p-1 sm:p-1 max-md:text-center flex-2 flex-col w-2/3 text-left">
+        <div className="max-md:w-3/3 sm:w-3/3 max-md:p-1 sm:p-1 max-md:text-center flex-2 flex-col w-2/3 text-left">
           <p className="text-6xl font-spacegrotesk">
             <span className="">Nichole</span> is a <span className="font-alagard"> Frontend Developer</span> and <span className="font-alagard">Designer</span> from the <span className="">Philippines</span> .
           </p>
           <br></br>
-          <p className="max-md:w-4/4 sm:w-4/4 max-md:p-6 sm:p-6 max-md:text-center text-2xl w-3/4 font-spacegrotesk">
+          <p className="max-md:w-4/4 sm:w-4/4 max-md:p-6 max-md:p-6 max-md:text-center text-2xl w-3/4 font-spacegrotesk">
             {" "}
             She enjoys volunteering, creating passion projects to make life
             easier, and watching devlogs.{" "}
