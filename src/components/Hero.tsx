@@ -12,7 +12,7 @@ function GetTime() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   const [date, setDate] = useState(new Date().toLocaleDateString());
   const [day, setDay] = useState(new Date().getDay());
-  const dayNames = ["Sun", "Mon","Tue", "Wed","Thu", "Fri","Sat"]
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,7 +26,7 @@ function GetTime() {
 
   return (
     <span className="text-white font-bold font-spacegrotesk">
-     {dayNames[day]}, {date} at {time} 
+      {dayNames[day]}, {date} at {time}
     </span>
   );
 }
@@ -47,7 +47,6 @@ export default function Hero({ onProjectTypeClick }: HeroProps) {
           ))}
         </span>
         <br></br>
-
       </div>
       <div className="flex lg:flex-col max-md:flex-col md:flex-col mt-12 ">
         <div className="flex-row flex max-lg:flex-col">
@@ -100,21 +99,27 @@ export default function Hero({ onProjectTypeClick }: HeroProps) {
         {/** Footer */}
         <div className="flex flex-col mt-12">
           <div className="flex flex-row gap-4">
-            <p className="font-spacegrotesk font-bold text-slate-600"> My Time </p>
+            <p className="font-spacegrotesk font-bold text-slate-600">
+              {" "}
+              My Time{" "}
+            </p>
             <iframe
               src="https://free.timeanddate.com/clock/ia8chj68/n145/fn6/fs18/fcfff/tc22d/ftb/bls0/brs0/bts4/btc00b/tt0/tw1/tm2/ta1"
-              frameborder="0"
-              width="325"
-              height="28"
-              style={{pointerEvents:'none'}}
-            ></iframe>
-            <p className="font-spacegrotesk font-bold text-slate-600"> Your Time </p>
+              frameBorder={0}
+              width={325}
+              height={28}
+              style={{ pointerEvents: "none" }}
+            />
+            <p className="font-spacegrotesk font-bold text-slate-600">
+              {" "}
+              Your Time{" "}
+            </p>
             <div className="bg-[#2222DD]  border-t-4 border-b-2 border-indigo-800 pl-4 pr-4 cursor-default">
               {" "}
               <GetTime />{" "}
             </div>
           </div>
-{/**         cursor trail hover change cursor when hovering
+          {/**         cursor trail hover change cursor when hovering
           certain items checkmark affirmation when clicking buttons gentle ease
           progress bar when scrolling */}
         </div>
