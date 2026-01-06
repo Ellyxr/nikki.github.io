@@ -21,7 +21,7 @@ export default function Education() {
         {designTools.map((item, index) => (
           <span
             key={index}
-            className="text-sm bg-slate-100 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600"
+            className="text-sm bg-slate-50 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600 hover:shadow-md hover:inset-shadow-sm cursor-default"
           >
             {item}
           </span>
@@ -29,14 +29,14 @@ export default function Education() {
       </ul>
     );
   };
-
+ 
   const TechToolKit = () => {
     return (
       <ul className="flex flex-wrap">
         {techSkills.map((item, index) => (
           <span
             key={index}
-            className="text-sm bg-slate-100 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600"
+            className="text-sm bg-slate-50 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600 hover:shadow-md hover:inset-shadow-sm cursor-default"
           >
             {item}
           </span>

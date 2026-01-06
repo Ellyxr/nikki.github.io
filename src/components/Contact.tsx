@@ -1,6 +1,9 @@
 import flower from "../assets/flower.svg";
 import tech from "../assets/tech.svg";
 
+const stars = "******************************".split("");
+
+
 export default function Contact() {
   return (
     <div className="text-left mt-8 mt-24">
@@ -62,7 +65,19 @@ export default function Contact() {
             {" "}
             /nichole-quimpan
           </a>
-          <a className="hover:text-blue-600 font-medium hover:underline text-2xl font-spacegrotesk">
+          <a className="font-medium underline decoration-blue-500 hover:text-blue-600 text-2xl font-spacegrotesk">
+            {" "}
+            Discord
+          </a>
+          <a
+            className="hover:text-blue-600"
+            href="https://discord.com/channels/@me"
+            target="_blank"
+          >
+            {" "}
+            /Gofigure
+          </a>
+          <a className="cursor-pointer hover:text-blue-600 font-medium hover:underline text-2xl font-spacegrotesk">
             {" "}
             Download My Resume
           </a>
@@ -72,7 +87,12 @@ export default function Contact() {
                 <br></br>
         {"‎ "}
       <span className="text-blue-700 text-8xl">
-        {"******************************"}
+        {stars.map((char, i) => (
+          <span key={i} className="text-blue-700 text-8xl hover:text-slate-900 cursor-default ease-in transition-colors duration-100"
+              style={{ transitionDelay: `${i * 1}ms` }}>
+            {char}  
+          </span>
+        ))}
         </span>
 
       </div>

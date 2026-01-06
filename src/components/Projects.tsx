@@ -50,7 +50,7 @@ const DevContainer = () => {
             <p className="text-md w-3/4 mb-2 font-spacegrotesk">{n.description}</p>
             <div className="flex flex-wrap">
             {n.tools.map((tool, index) => (
-              <span key={index} className="text-sm bg-slate-50 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600 cursor-default">
+              <span key={index} className="text-sm bg-slate-50 m-1 p-1 border-1 border-slate-300 rounded-md hover:border-blue-600 hover:text-blue-600 hover:shadow-md hover:inset-shadow-sm cursor-default">
                 {tool}
               </span>
             ))}

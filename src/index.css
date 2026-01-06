@@ -11,3 +11,9 @@
     @apply lg:flex lg:bg-red-200;
   }
 }
+
+body {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%232222DD" d="m12 2 12 20H0L12 2z"></path></svg>')
+      12 12,
+    auto;
+}
