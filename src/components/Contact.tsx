@@ -1,8 +1,22 @@
 import flower from "../assets/flower.svg";
 import tech from "../assets/tech.svg";
+import resume from "../assets/Quimpan_Resume June 2026.pdf";
 
 const stars = "******************************".split("");
 
+function downloadResume() {
+
+    const link:HTMLAnchorElement = document.createElement("a");
+
+    link.href = resume;
+    link.setAttribute("download","Quimpan_Resume.pdf");
+    link.style.display = "none";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+}
 
 export default function Contact() {
   return (
@@ -65,7 +79,7 @@ export default function Contact() {
             {" "}
             /nichole-quimpan
           </a>
-          <a className="font-medium underline decoration-blue-500 hover:text-blue-600 text-2xl font-spacegrotesk">
+          {/* <a className="font-medium underline decoration-blue-500 hover:text-blue-600 text-2xl font-spacegrotesk">
             {" "}
             Discord
           </a>
@@ -76,8 +90,8 @@ export default function Contact() {
           >
             {" "}
             /Gofigure
-          </a>
-          <a className="cursor-pointer hover:text-blue-600 font-medium hover:underline text-2xl font-spacegrotesk">
+          </a> */}
+          <a onClick={downloadResume} type="button" className="cursor-pointer hover:text-blue-600 font-medium hover:underline text-2xl font-spacegrotesk mt-2">
             {" "}
             Download My Resume
           </a>

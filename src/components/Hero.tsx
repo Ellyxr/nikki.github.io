@@ -1,6 +1,7 @@
 import tech from "../assets/tech.svg";
 import design from "../assets/design.svg";
 import { useState, useEffect } from "react";
+import Popover from "./Popover";
 
 interface HeroProps {
   onProjectTypeClick: (type: string) => void;
@@ -31,6 +32,9 @@ function GetTime() {
   );
 }
 
+{
+  /** HERO SECTION */
+}
 export default function Hero({ onProjectTypeClick }: HeroProps) {
   return (
     <section id="hero" className="snap-section min-h-dvh max-md:flex-col">
@@ -64,7 +68,7 @@ export default function Hero({ onProjectTypeClick }: HeroProps) {
               from the <span className="">Philippines</span> .
             </p>
             <br></br>
-            <p className="max-md:w-4/4 sm:w-4/4 max-md:p-6 max-md:p-6 max-md:text-center text-2xl w-3/4 font-spacegrotesk">
+            <p className="max-md:w-4/4 sm:w-3/4 max-md:p-6 max-md:p-6 max-md:text-center text-2xl w-3/4">
               {" "}
               She enjoys volunteering, creating passion projects to make life
               easier, and watching devlogs.{" "}
@@ -72,16 +76,27 @@ export default function Hero({ onProjectTypeClick }: HeroProps) {
           </div>
           <div className="sm:max-md:p-2 flex flex-1 flex-col justify-center place-center max-lg:m-24">
             <section className="lg:w-[70%] max-lg:min-w-[100%] max-lg:justify-center ">
-              <button
-                className="flex justify-end max-lg:justify-end"
-                onClick={() => onProjectTypeClick("dev")}
+             {/*  LAPTOP POPOVER */}
+              <Popover
+                content={
+                  <div className="text-sm max-w-xs absolute z-10 bg-blue-100 flex ">
+                   {/*  <p className="font-semibold">Development Project</p>
+                    <p>Web, mobile, or system development requests.</p> */}
+                  </div>
+                }
               >
-                <img
-                  src={tech}
-                  alt="Laptop icon"
-                  className="rotate-330 w-1/2 max-lg:w-1/3 cursor-pointer"
-                ></img>
-              </button>
+                <button
+                  className="flex justify-end max-lg:justify-end"
+                  onClick={() => onProjectTypeClick("dev")}
+                >
+                  <img
+                    src={tech}
+                    alt="Laptop icon"
+                    className="rotate-330 w-1/2 max-lg:w-1/3 cursor-pointer"
+                  />
+                </button>
+              </Popover>
+
               <button
                 className="flex justify-start max-lg:justify-start max-lg:ml-20"
                 onClick={() => onProjectTypeClick("design")}
