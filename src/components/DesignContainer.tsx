@@ -1,4 +1,4 @@
-import tech from "../assets/tech.svg";
+
 import scsgif from "../assets/scsgif.gif";
 
 export const design = [
